@@ -2,11 +2,11 @@
   "name": "@koa-api/auth",
   "version": "1.0.0",
   "description": "koa-api auth",
-  "main": "./build/src/index.js",
-  "types": "./build/src/index.d.ts",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
-    "build": "rm -rf build ; tsc",
-    "test": "mocha build/test/test.js"
+    "build": "rm -rf dist ; tsc",
+    "test": "npm run build && mocha dist/test/test.js"
   },
   "maintainers": [
     {
@@ -21,8 +21,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@koa-api/router": "1.0.0",
-    "@koa-api/identity": "1.0.0"
+    "koa": "^2.5.0"
   },
   "devDependencies": {
     "@types/koa": "^2.0.45",

@@ -77,7 +77,7 @@ export async function run(context: Koa.Context, next: () => Promise<void>) {
 
     let roles: string[];
 
-    if (info && info.anonymous.has(route.action) === false) {
+    if (info && (!info.anonymous || info.anonymous.has(route.action) === false)) {
         roles = [];
         if (info.css) {
             allowAnonymous = false;
@@ -85,7 +85,7 @@ export async function run(context: Koa.Context, next: () => Promise<void>) {
                 roles = roles.concat(info.roles);
             }
         }
-        if (info.actions.has(route.action)) {
+        if (info.actions && info.actions.has(route.action)) {
             allowAnonymous = false;
             let actionRoles = info.actions.get(route.action);
             if (actionRoles) {
