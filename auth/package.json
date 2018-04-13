@@ -1,0 +1,33 @@
+{
+  "name": "@koa-api/auth",
+  "version": "1.0.0",
+  "description": "koa-api auth",
+  "main": "./build/src/index.js",
+  "types": "./build/src/index.d.ts",
+  "scripts": {
+    "build": "rm -rf build ; tsc",
+    "test": "mocha build/test/test.js"
+  },
+  "maintainers": [
+    {
+      "name": "luliang",
+      "email": "lu_liang@qq.com"
+    }
+  ],
+  "keywords": [
+    "koa",
+    "api",
+    "auth"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@koa-api/router": "1.0.0",
+    "@koa-api/identity": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.45",
+    "@types/mocha": "^2.2.48",
+    "mocha": "^3.5.3",
+    "typescript": "2.8.1"
+  }
+}

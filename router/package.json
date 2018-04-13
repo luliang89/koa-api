@@ -1,0 +1,33 @@
+{
+  "name": "@koa-api/router",
+  "version": "1.0.0",
+  "description": "koa route",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist ; tsc",
+    "test": "npm run build ; mocha dist/test/test.js"
+  },
+  "maintainers": [
+    {
+      "name": "luliang",
+      "email": "lu_liang@qq.com"
+    }
+  ],
+  "keywords": [
+    "koa",
+    "api",
+    "router"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.5.0",
+    "path-to-regexp": "2.2.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.45",
+    "@types/mocha": "^2.2.48",
+    "mocha": "^3.5.3",
+    "typescript": "2.8.1"
+  }
+}
