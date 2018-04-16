@@ -19,6 +19,8 @@ export interface IdentityConfig {
 
 export const config: IdentityConfig = {
 
+    appName : '',
+
     secret: 'secret',
 
     expires: 20

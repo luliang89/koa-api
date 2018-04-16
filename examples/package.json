@@ -1,11 +1,13 @@
 {
-  "name": "@koa-api/identity",
+  "name": "koa-api-examples",
   "version": "1.0.0",
-  "description": "koa-api authentication",
+  "description": "koa api examples",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist ; tsc"
+    "build": "rm -rf dist ; tsc",
+    "start": "npm run build && node src",
+    "test": "npm run build ; mocha dist/test/test.js"
   },
   "maintainers": [
     {
@@ -16,17 +18,15 @@
   "keywords": [
     "koa",
     "api",
-    "identity"
+    "router"
   ],
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.5.0",
-    "redis": "^2.8.0"
+    "koa": "^2.5.0"
   },
   "devDependencies": {
     "@types/koa": "^2.0.45",
     "@types/mocha": "^2.2.48",
-    "@types/redis": "^2.8.6",
     "mocha": "^3.5.3",
     "typescript": "2.8.1"
   }
